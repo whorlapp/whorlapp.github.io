@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Source+Code+Pro:wght@300;500&display=swap" rel="stylesheet">
+<head>
+  <title>WHORL_app</title>
+  <style>
+    /* Add some basic styles to make the page look nice */
+    body {
+      font-family: 'Inconsolata', monospace;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 50px 50px;
+    }
+
+    h1 {
+      font-size: max(5vh, 25px);
+      margin: 0 0 20px;
+    }
+    h2 {
+      font-size: max(3vh, 15px);
+    }
+    h3 {
+      font-size: max(2.5vh, 13px);
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+      padding-left: 20px;
+      position: relative;
+      font-size: max(2vh, 10px);
+    }
+
+    li:before {
+      /*content: '\2022';*/
+      position: absolute;
+      left: 0;
+      top: 2px;
+      font-size: 1.2em;
+    }
+    .container li:before {
+      content: '\2022'
+    }
+    .info {
+      font-size: max(1vh, 8px);
+      margin: 10px auto;
+      padding: 5px 5px;
+      /*position: absolute;*/
+      /*bottom: 0;*/
+      /*left: 0;*/
+      background-color: #ffffff;
+      max-width: 800px;
+      /*width: 100%;*/
+    }
+    img {
+      width: min(1000px, 80vw)
+    }
+
+    /*.info p {*/
+    /*  align-self: flex-end;*/
+    /*}*/
+    @media screen and (max-height: calc(100vh - 40px)) {
+      .info {
+        display: none;
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: flex-end;
+      padding: 5px 30px;
+    }
+    .nav-links a {
+      color: black;
+    }
+    .nav-links li {
+      text-decoration: none;
+    }
+     .footer {
+       position: fixed;
+       left: 0;
+       bottom: 0;
+       width: 10%;
+       text-align: left;
+     }
+
+  </style>
+</head>
+<body>
+<nav>
+  <ul class="nav-links", style="color: #121212">
+    <li><a href="index.html">whorl</a></li>
+    <li><a href="about.html">about</a></li>
+    <li><a href="#">docs</a></li>
+    <li><a href="demo.html">demo</a></li>
+    <li><a href="buy.html">buy</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <h1>whorl</h1>
+  <h2>video demo</h2>
+    <p>video demo of whorl coming soon! Please enjoy these screenshots:</p>
+  <p>1. Run and adjust ML models for cell detection and classifiction</p>
+  <img src="whorl_features.png" alt="screenshot of application">
+  <p>2. Correct and edit detections to train new models</p>
+  <img src="annotate_whorl.png" alt="screenshot of application annotation">
+  <p>3. Fast iteration on large datasets using real-time model updates</p>
+  <img src="live_update.png" alt="screenshot of application annotation">
+  <p>4. Evaluate on a cochlea in a single piece, or many</p>
+  <img src="whole_cochlea.png" alt="screenshot of application annotation">
+  <p class="info">
+    Buswinka Consulting Group LLC, buswinka.io/whorl, buswinka@gmail.com
+  </p>
+</div>
+
+
+</body>
+</html>
